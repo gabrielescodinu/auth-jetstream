@@ -96,7 +96,7 @@ class CompanyController extends Controller
             'category' => 'required',
         ]);
 
-        if ($company->image == null) {
+        if($request->hasFile('image')){
             $request->validate([
                 'name' => 'required',
                 'email' => 'required',
