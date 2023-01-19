@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\CompaniesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,7 @@ use App\Http\Controllers\CompanyController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
+Route::resource('companies-guest', CompaniesController::class);
 
 Route::middleware([
     'auth:sanctum',

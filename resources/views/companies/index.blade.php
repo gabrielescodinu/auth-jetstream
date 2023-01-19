@@ -44,7 +44,7 @@
                         </td>
                         <td><img class="h-16 w-auto" src="{{ url('storage/'.$company->image) }}" alt="" title="" /></td>
                     </tr>
-                    @endforeach
+                @endforeach
             </tbody>
         </table>
         {!! $companies->links() !!}
