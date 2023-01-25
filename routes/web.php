@@ -18,7 +18,9 @@ use App\Http\Controllers\CompaniesController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('companies-guest', CompaniesController::class);
+Route::get('/list', function () {
+    return view('list');
+});
 
 Route::middleware([
     'auth:sanctum',
